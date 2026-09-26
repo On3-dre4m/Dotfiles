@@ -1,0 +1,1 @@
+export GRIMSHOT_FILENAME_FORMAT='%Y-%m-%d_W%V_%H-%M-%S.png'

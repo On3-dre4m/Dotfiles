@@ -1,0 +1,63 @@
+BasedOnStyle: LLVM
+
+# Set the limit character up to unsigned ColumnLimit value
+ColumnLimit: 200
+
+# Number of column used to indent
+IndentWidth: 4
+
+# TrailingCommentsAlignmentKinds Kind Specifies the way to align trailing comments.
+# Possible values:
+# TCAS_Leave (in configuration: Leave) Leave trailing comments as they are.
+#
+# TCAS_Always (in configuration: Always) Align trailing comments.
+#
+# TCAS_Never (in configuration: Never) Don’t align trailing comments but other formatter applies.
+#
+# unsigned OverEmptyLines How many empty lines to apply alignment. When both MaxEmptyLinesToKeep and OverEmptyLines are set to 2, it formats like below.
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+
+# Style of aligning consecutive macro definitions.
+# The result will have this format:
+#
+# #define SHORT_NAME       42
+# #define LONGER_NAME      0x007f
+# #define EVEN_LONGER_NAME (2)
+# #define foo(x)           (x * x)
+# #define bar(y, z)        (y + z)
+AlignConsecutiveMacros:
+  Enabled: true
+
+
+# Not to sort include
+SortIncludes: false
+
+# Comment reformatting style for better visual
+ReflowComments: IndentOnly
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: 1
+SpacesBeforeTrailingComments: 5  
+
+# Make the address symbol & align to the [Left|Middle|Right] of datatype
+ReferenceAlignment: Left
+PointerAlignment: Left
+
+# If `true`,  (int) i;
+# If `false`, (int)i;
+SpaceAfterCStyleCast: false 
+
+# If `true`,  int i ==(int a);
+# If `false`, int i==(int a);
+SpaceAfterOperatorKeyword: false
+
+
+# If `true`,  int a = 5;
+# If `false`, int a= 5;  
+SpaceBeforeAssignmentOperators: true
+
+# If `true`,  class Foo : Bar {};
+# If `false`, class Foo: Bar {}
+SpaceBeforeInheritanceColon: false

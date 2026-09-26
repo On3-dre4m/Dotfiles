@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "height": 10,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "battery",
+    "temperature",
+    "cpu",
+    "memory",
+    "tray"
+  ],
+  "sway/mode": {
+	"format": "  {}",
+	"max-length": 150
+  },
+  "sway/window": {
+    "max-length": 10
+  },
+  "battery": {
+    "bat": "BAT1",
+    "interval": 10,
+    "format": "{capacity}% {icon}",
+    "format-icons": {
+      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+    }
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10,
+    "on-click": ""
+  },
+  "memory": {
+    "interval": 10,
+    "format": " {used}GiB",
+    "tooltip-format": "{used:0.1f}G/{total:0.1f}G used",
+    "on-click": "exec kitty -T HTOP -- htop"
+  },
+  "network": {
+    "interface": "wlo1",
+    "format": "",
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-ethernet": "",
+    "format-disconnected": "󰤭", //An empty format will hide the module.
+    // "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    // "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    // "tooltip-format-ethernet": "{ifname} ",
+    // "tooltip-format-disconnected": "󰖪",
+    "max-length": 50,
+    "on-click": ""
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""]
+    },
+    "scroll-step": 2,
+    "on-click": "pavucontrol"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+      "blueman": "bluetooth"
+    }
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "󰥔 {:%a, %d. %b %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#75f1fa'><b>{}</b></span>"
+      }
+    }
+  }
+}

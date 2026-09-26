@@ -1,0 +1,22 @@
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias gg='lazygit'
+alias gs='git status'
+alias gc='git clone'
+alias gl='git --no-pager log --oneline --graph --parents'
+
+alias cdVault='cd /mnt/HahaZone/Workplace/Obsidian/Vault'
+alias cdVideo='cd /mnt/HahaZone/USER/Downloads/Videos'
+alias cdMusic='cd /mnt/HahaZone/USER/Downloads/Music'
+alias v='nvim'
+alias pypac="pipx run pipdeptree --freeze --warn silence | grep -E '^\S'"
+alias oo="cd /mnt/E_Drive/Workplace/Obsidian/Vault && v"
+alias vv="fzf -i --preview 'batcat --color=always {}'"
+alias mgui='source ~/moteus-venv/bin/activate && tview'
+alias mm='TERM=xterm musikcube'
+alias cb='snap run clipboard'
+alias get-idf=". $HOME/esp/esp-idf/export.sh"
+

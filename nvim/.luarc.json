@@ -1,0 +1,17 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "MiniNotify",
+        "Snacks",
+        "MiniFiles"
+    ],
+    "diagnostics.disable": [
+        "trailing-space",
+        "missing-fields",
+        "unused-local",
+        "undefined-doc-name",
+        "deprecated",
+        "undefined-field",
+        "return-type-mismatch"
+    ]
+}

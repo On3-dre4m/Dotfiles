@@ -1,0 +1,76 @@
+{
+  "Header": {
+    "prefix": "header",
+    "body": [
+      "/*",
+      " * $TM_FILENAME",
+      " * ",
+      " *  Created on: ${CURRENT_MONTH_NAME_SHORT}, ${CURRENT_YEAR}",
+      " *      Author: ${1:PhatLe}",
+      " */",
+      "#ifndef __${2:HEADER_NAME}__",
+      "#define __${2:HEADER_NAME}__",
+      "",
+      "#ifdef __cplusplus",
+      "extern \"C\" {",
+      "#endif",
+      "",
+      "${3}",
+      "",
+      "#ifdef __cplusplus",
+      "}",
+      "#endif",
+      "",
+      "#endif // __${2}__"
+    ],
+    "description": "C-style file header with include guards"
+  },
+  "Hardware Header": {
+    "prefix": "header_hw",
+    "body": [
+      "/*",
+      " * $TM_FILENAME",
+      " * ",
+      " *  Created on: ${CURRENT_MONTH_NAME_SHORT}, ${CURRENT_YEAR}",
+      " *      Author: PhatLe",
+      " */",
+      "",
+      "#ifndef __HW_CONFIG_H__",
+      "#define __HW_CONFIG_H__",
+      "",
+      "/* Timer and PWM */",
+      "${1}",
+      "",
+      "/* ISR */",
+      "",
+      "/* ADC */",
+      "",
+      "/* DRV Gate */",
+      "",
+      "/* Encoder */",
+      "",
+      "/* Misc GPIO */",
+      "",
+      "/* CAN */",
+      "",
+      "/* Hardware constants */",
+      "",
+      "/* Current controller */",
+      "",
+      "#endif // __HW_CONFIG_H__"
+    ],
+    "description": "Hardware configuration header template"
+  },
+  "Copyright": {
+    "prefix": "copyright_C",
+    "body": [
+      "/*",
+      " * $TM_FILENAME",
+      " * ",
+      " *  Created on: ${CURRENT_MONTH_NAME}, ${CURRENT_YEAR}",
+      " *      Author: PhatLe",
+      " */"
+    ],
+    "description": "C-style copyright block"
+  }
+}

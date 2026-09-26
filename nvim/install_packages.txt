@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Script to install packages using nala on Linux Mint
+
+# List of packages to install (duplicates removed)
+PACKAGES=(
+# Nvim use-case
+    "fzf"
+    "fd-find"
+    "ripgrep"
+    "gzip"
+    "pip"
+)
+
+# Check if nala is installed
+if ! command -v nala &> /dev/null; then
+    echo "Error: nala is not installed. Please install it first with:"
+    echo "sudo apt update && sudo apt install nala -y"
+    exit 1
+fi
+
+# Check if script is run with sudo privileges
+if [ "$EUID" -ne 0 ]; then
+    echo "Error: This script must be run as root (use sudo)."
+    exit 1
+fi
+
+# Update package cache
+echo "Updating package cache with nala..."
+nala update
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to update package cache."
+    exit 1
+fi
+
+# Install packages
+echo "Installing packages: ${PACKAGES[*]}"
+nala install "${PACKAGES[@]}"
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to install one or more packages."
+    exit 1
+fi
+
+# Clean up
+echo "Cleaning up unnecessary packages..."
+nala autopurge -y
+if [ $? -ne 0 ]; then
+    echo "Warning: Failed to clean up unnecessary packages."
+fi
+
+echo "Package installation completed successfully!"
+exit 0

@@ -1,0 +1,43 @@
+{
+  "name": "example-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "all"
+        ],
+        "path": "./all.json"
+      },
+      {
+        "language": [
+          "c"
+        ],
+        "path": "./c.json"
+      },
+      {
+        "language": [
+          "h"
+        ],
+        "path": "./c.json"
+      },
+      {
+        "language": [
+          "tex"
+        ],
+        "path": "./tex.json"
+      },
+      {
+        "language": [
+          "python"
+        ],
+        "path": "./py.json"
+      },
+      {
+        "language": [
+          "markdown"
+        ],
+        "path": "./md.json"
+      }
+    ]
+  }
+}

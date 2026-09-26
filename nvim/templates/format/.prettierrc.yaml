@@ -1,0 +1,8 @@
+# For Markdown filetype
+printWidth: 80
+tabWidth: 4
+parser: "markdown"
+objectWrap: "preserve"
+proseWrap: "preserve"
+bracketSpacing: false
+

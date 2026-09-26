@@ -1,0 +1,27 @@
+{
+  "Matplotlib 1 figure template": {
+    "prefix": "matplot_1fig",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import numpy as np",
+      "import pandas as pd",
+      "",
+      "# Initialize the subplot",
+      "fig, ax1 = plt.subplots(figsize=(8, 8), dpi=600)",
+      "",
+      "'''Graph definition section'''",
+      "",
+      "",
+      "# Interface customization",
+      "ax1.set_xlabel('')",
+      "ax1.set_ylabel('')",
+      "ax1.set_title('', fontdict={'fontsize': 16})",
+      "",
+      "# Add a legend",
+      "ax1.legend()",
+      "",
+      "# Show the plot",
+      "plt.show()"
+    ]
+  }
+}

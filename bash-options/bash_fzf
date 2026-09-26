@@ -1,0 +1,14 @@
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+export FZF_COMPLETION_TRIGGER='**'
+
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'
+  --no-height"
+
+export FZF_COMPLETION_OPTS='--border --info=inline'
+export FZF_COMPLETION_DIR_OPTS='--walker dir,follow'
+export FZF_COMPLETION_PATH_OPTS='--walker file,dir,follow,hidden'
