@@ -1,4 +1,4 @@
-vim.pack.add({ { src = "https://github.com/nvim-mini/mini.nvim", name = "mini" } })
+vim.pack.add({ { src = "https://github.com/nvim-mini/mini.nvim", name = "mini", version = "v0.18.0" } })
 -- "nvim-mini/mini.nvim",
 require("mini.ai").setup({})
 require("mini.surround").setup({

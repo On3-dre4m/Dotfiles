@@ -31,7 +31,7 @@
 -- 	extensions = {},
 -- })
 
-vim.pack.add({ { src = "https://github.com/folke/snacks.nvim", name = "snacks" } })
+vim.pack.add({ { src = "https://github.com/folke/snacks.nvim", name = "snacks", version = "v2.31.0" } })
 require("snacks").setup({
 	styles = {
 		snacks_image = {

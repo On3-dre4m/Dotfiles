@@ -1,4 +1,4 @@
-vim.pack.add({ { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } })
+vim.pack.add({ { src = "https://github.com/catppuccin/nvim", name = "catppuccin", version = "v2.0.0" } })
 
 require("catppuccin").setup({
 	flavor = "mocha",

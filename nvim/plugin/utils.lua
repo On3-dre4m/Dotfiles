@@ -1,4 +1,4 @@
-vim.pack.add({ { src = "https://github.com/mikavilpas/yazi.nvim", name = "yazi" } })
+vim.pack.add({ { src = "https://github.com/mikavilpas/yazi.nvim", name = "yazi", version = "v14.0.2" } })
 -- "mikavilpas/yazi.nvim",
 require("yazi").setup({
 	-- if you want to open yazi instead of netrw, see below for more info
@@ -18,12 +18,12 @@ vim.keymap.set("n", "<leader>cw", "<cmd>Yazi cwd<cr>", {
 
 ---
 ---
-vim.pack.add({ { src = "https://github.com/folke/which-key.nvim", name = "which-key" } })
+vim.pack.add({ { src = "https://github.com/folke/which-key.nvim", name = "which-key", version = "v3.17.0" } })
 vim.keymap.set("n", "<leader>?", function()
 	require("which-key").show({ global = true })
 end, { desc = "Buffer Local Keymaps (which-key)" })
 
-vim.pack.add({ { src = "https://github.com/stevearc/resession.nvim", name = "resession" } })
+vim.pack.add({ { src = "https://github.com/stevearc/resession.nvim", name = "resession", version = "v1.2.1" } })
 local resession = require("resession")
 resession.setup({})
 

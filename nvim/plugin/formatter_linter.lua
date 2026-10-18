@@ -1,4 +1,4 @@
-vim.pack.add({ { src = "https://github.com/stevearc/conform.nvim", name = "conform" } })
+vim.pack.add({ { src = "https://github.com/stevearc/conform.nvim", name = "conform", version = "v9.1.0" } })
 ---Custom function
 local function find_clang_format_file()
 	local cwd = vim.fn.getcwd()

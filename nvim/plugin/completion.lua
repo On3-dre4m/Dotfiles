@@ -10,7 +10,7 @@ require("luasnip").filetype_extend("markdown", { "tex" })
 --
 --
 
-vim.pack.add({ { src = "https://github.com/Saghen/blink.cmp", name = "blink.cmp", version = vim.version.range("1.x") } })
+vim.pack.add({ { src = "https://github.com/Saghen/blink.cmp", name = "blink.cmp", version = "v1.10.2" } })
 vim.pack.add({ { src = "https://github.com/nvim-lua/plenary.nvim", name = "plenary" } })
 -- "saghen/blink.cmp",
 -- dependencies = {
