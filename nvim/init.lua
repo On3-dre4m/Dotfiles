@@ -7,5 +7,4 @@ require("vim-autocmds")
 require("vim-usercmds")
 
 require("myplugins.Minimal.floater")
-require("myplugins.Minimal.auto-pairs").setup()
 require("myplugins.Minimal.statusline").setup()

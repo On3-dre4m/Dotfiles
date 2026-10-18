@@ -1,15 +1,23 @@
 vim.pack.add({ { src = "https://github.com/nvim-mini/mini.nvim", name = "mini", version = "v0.18.0" } })
 -- "nvim-mini/mini.nvim",
+
+-----------------
+--- UTILITIES ---
+-----------------
 require("mini.ai").setup({})
+require("mini.pairs").setup({})
 require("mini.surround").setup({
 	n_lines = 9999,
 })
+require("mini.jump2d").setup({})
 require("mini.files").setup({})
 vim.keymap.set("n", "<leader>w", function()
 	MiniFiles.open()
 end, { desc = "MiniFiles" })
 
--- NOTE: Appearance
+--------------------
+--- NOTIFICATION ---
+--------------------
 require("mini.notify").setup({
 	-- Content management
 	content = {
