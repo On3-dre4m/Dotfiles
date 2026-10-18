@@ -19,19 +19,41 @@ vim.api.nvim_create_autocmd("PackChanged", {
 })
 
 local ensureInstalled = {
+	-- Core programming languages
 	"lua",
 	"c",
 	"cpp",
+	"python",
+	"bash",
+
+	-- Build systems and configuration
 	"make",
 	"cmake",
-	"python",
 	"ninja",
-	"rst",
-	"markdown",
-	"markdown_inline",
+	"kconfig",
+	"devicetree",
+
+	-- Containers and templating
+	"dockerfile",
+	"jinja",
+	"ini",
+
+	-- Networking and data
+	"yang",
+	"http",
+	"sql",
+	"strace",
+
+	-- Structured data formats
 	"json",
 	"toml",
 	"yaml",
+
+	-- Documentation and diagrams
+	"markdown",
+	"markdown_inline",
+	"rst",
+	"mermaid",
 }
 
 local alreadyInstalled = require("nvim-treesitter.config").get_installed()

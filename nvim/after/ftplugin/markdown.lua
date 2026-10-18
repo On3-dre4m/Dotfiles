@@ -114,3 +114,49 @@ local function smart_gf()
 end
 
 vim.keymap.set("n", "gf", smart_gf)
+
+-------------------------
+-- Copy codeblock Utility
+-------------------------
+
+local function CopyCodeBlock()
+	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+	local row = vim.api.nvim_win_get_cursor(0)[1]
+
+	local start_line, end_line
+
+	-- Find the opening fence above the cursor
+	for i = row, 1, -1 do
+		if lines[i]:match("^%s*```") then
+			start_line = i
+			break
+		end
+	end
+
+	if not start_line then
+		vim.notify("No code block found", vim.log.levels.WARN)
+		return
+	end
+
+	-- Find the closing fence
+	for i = start_line + 1, #lines do
+		if lines[i]:match("^%s*```%s*$") then
+			end_line = i
+			break
+		end
+	end
+
+	if not end_line or row <= start_line or row >= end_line then
+		vim.notify("Cursor is not inside a code block", vim.log.levels.WARN)
+		return
+	end
+
+	local code = vim.list_slice(lines, start_line + 1, end_line - 1)
+
+	vim.fn.setreg("+", table.concat(code, "\n"))
+	vim.notify("Code block copied to clipboard")
+end
+
+vim.api.nvim_create_user_command("CopyCodeBlock", function()
+	CopyCodeBlock()
+end, {})
