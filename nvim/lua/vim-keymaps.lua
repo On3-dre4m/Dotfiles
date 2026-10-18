@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<cr>", { desc = "Switch to alternat
 vim.keymap.set("n", "<leader>v", "<C-w>v<C-w><C-l>", {}) -- split window vertically
 vim.keymap.set("n", "<leader>h", "<C-w>s<C-w><C-j>", {}) -- split window horizontally
 
-vim.keymap.set("n", "<leader>cc", "<cmd>bdelete<CR>", { silent = true, desc = "[C]lose [C]urrent Buffer Line" })
+vim.keymap.set("n", "<leader>cc", "<cmd>bdelete!<CR>", { silent = true, desc = "[C]lose [C]urrent Buffer Line" })
 
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", {})
